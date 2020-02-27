@@ -21,7 +21,7 @@ public class InterviewRegistrationService {
         List<Attendee> attendeesList = new ArrayList<>();
         while (true) {
             System.out.print("enter the id of attendee :  (type 'exit' to exit)");
-            String newAttendee = inputHelper.readInt();
+            String newAttendee = inputHelper.readAttendeeId();
             if (newAttendee == EXIT_TEXT) {
                 break;
             }

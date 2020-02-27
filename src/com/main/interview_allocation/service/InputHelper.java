@@ -9,7 +9,7 @@ public class InputHelper {
     public static final String EXIT_TEXT = "exit";
     private Scanner input = new Scanner(System.in);
 
-    public String readInt() {
+    public String readAttendeeId() {
         return inputReader(ATTENDEE_ID_FORMAT);
     }
 
