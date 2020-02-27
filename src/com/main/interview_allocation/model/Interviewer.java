@@ -17,4 +17,11 @@ public class Interviewer {
         Interviewer that = (Interviewer) o;
         return Objects.equals(name, that.name);
     }
+
+    @Override
+    public String toString() {
+        return "Interviewer{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
