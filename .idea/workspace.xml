@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9945370-7fdf-4e24-bfde-e746fcdd0647" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Attendee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterViewRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterViewRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterviewTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterviewTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interviewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interviewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewManagementDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewManagementDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewRegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/test/service/InterviewRegistrationServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582789690987</updated>
-      <workItem from="1582789695732" duration="28222000" />
+      <workItem from="1582789695732" duration="28667000" />
     </task>
     <servers />
   </component>
@@ -100,22 +91,22 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="321" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1582805310649" />
-    <state width="1398" height="396" key="GridCell.Tab.0.bottom" timestamp="1582834585560">
+    <state width="1398" height="396" key="GridCell.Tab.0.bottom" timestamp="1582834933435">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="396" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1582834585560" />
-    <state width="1398" height="396" key="GridCell.Tab.0.center" timestamp="1582834585558">
+    <state width="1398" height="396" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1582834933435" />
+    <state width="1398" height="396" key="GridCell.Tab.0.center" timestamp="1582834933434">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="396" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1582834585558" />
-    <state width="1398" height="396" key="GridCell.Tab.0.left" timestamp="1582834585557">
+    <state width="1398" height="396" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1582834933434" />
+    <state width="1398" height="396" key="GridCell.Tab.0.left" timestamp="1582834933432">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="396" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1582834585557" />
-    <state width="1398" height="396" key="GridCell.Tab.0.right" timestamp="1582834585559">
+    <state width="1398" height="396" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1582834933432" />
+    <state width="1398" height="396" key="GridCell.Tab.0.right" timestamp="1582834933434">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="396" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1582834585559" />
+    <state width="1398" height="396" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1582834933434" />
     <state width="1398" height="417" key="GridCell.Tab.1.bottom" timestamp="1582834544653">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -152,31 +143,5 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="385" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1582798069010" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
