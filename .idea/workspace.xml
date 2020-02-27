@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9945370-7fdf-4e24-bfde-e746fcdd0647" name="Default Changelist" comment="" />
+    <list default="true" id="b9945370-7fdf-4e24-bfde-e746fcdd0647" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Attendee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InputHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewManagementDashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewRegistrationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/test/service/InterviewRegistrationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewAllocationProblem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewAllocationProblem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,8 +35,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.main.interview_allocation.service" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.main.interview_allocation.service" />
+      <recent name="com.main.interview_allocation.model" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -48,11 +78,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582789690987</updated>
-      <workItem from="1582789695732" duration="306000" />
+      <workItem from="1582789695732" duration="2942000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="533" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1582794539892">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="533" y="148" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1582794539892" />
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1582794547354">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1582794547354" />
+    <state width="1398" height="205" key="GridCell.Tab.0.center" timestamp="1582794547353">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1582794547353" />
+    <state width="1398" height="205" key="GridCell.Tab.0.left" timestamp="1582794547352">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1582794547352" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right" timestamp="1582794547353">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1582794547353" />
+    <state x="432" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1582790989163">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="432" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.804@0.23.1440.804" timestamp="1582790989163" />
   </component>
 </project>
