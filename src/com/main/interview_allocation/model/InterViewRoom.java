@@ -20,8 +20,6 @@ public class InterviewRoom {
 
     @Override
     public String toString() {
-        return "InterviewRoom{" +
-                "roomName='" + roomName + '\'' +
-                '}';
+        return "\troom = " +roomName;
     }
 }

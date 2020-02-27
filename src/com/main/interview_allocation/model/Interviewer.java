@@ -20,8 +20,6 @@ public class Interviewer {
 
     @Override
     public String toString() {
-        return "Interviewer{" +
-                "name='" + name + '\'' +
-                '}';
+        return "\tInterviewer = " + name ;
     }
 }

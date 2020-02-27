@@ -1,23 +1,20 @@
 package com.main.interview_allocation.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class InterviewTime {
 
-    private LocalDateTime startTime;
+    private final LocalTime startTime;
 
-    private LocalDateTime endTime;
+    private final LocalTime endTime;
 
-    public InterviewTime(LocalDateTime startTime, LocalDateTime endTime) {
+    public InterviewTime(LocalTime startTime, LocalTime endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
     }
 
     @Override
     public String toString() {
-        return "InterviewTime{" +
-                "startTime=" + startTime +
-                ", endTime=" + endTime +
-                '}';
+        return "\ttime = " + startTime +"="+endTime;
     }
 }

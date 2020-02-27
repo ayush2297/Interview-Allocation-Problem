@@ -20,8 +20,6 @@ public class Attendee {
 
     @Override
     public String toString() {
-        return "Attendee{" +
-                "id='" + id + '\'' +
-                '}';
+        return "Attendee ="+ id ;
     }
 }

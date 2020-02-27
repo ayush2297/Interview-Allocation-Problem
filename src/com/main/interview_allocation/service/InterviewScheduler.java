@@ -2,24 +2,47 @@ package com.main.interview_allocation.service;
 
 import com.main.interview_allocation.model.*;
 
-import java.util.HashMap;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class InterviewScheduler {
-    public Map<Attendee, Interview> scheduleInterviews(List<Attendee> attendeeList, List<Interviewer> interviewerList, List<InterviewRoom> roomList) {
+
+    private static int INTERVIEW_DURATION = 2;
+    private static LocalTime INTERVIEW_START_TIME = LocalTime.of(9, 0);
+    private static LocalTime INTERVIEW_END_TIME = INTERVIEW_START_TIME.plusHours(INTERVIEW_DURATION);
+
+    public List<Interview> scheduleInterviews(List<Attendee> attendeeList, List<Interviewer> interviewerList, List<InterviewRoom> roomList) {
         int interviewerNo = 0;
         int roomNo = 0;
-        Map<Attendee, Interview> interviews = new HashMap<>();
+        List<Interview> interviews = new ArrayList<>();
         for (Attendee attendee : attendeeList) {
             Interviewer interviewer = interviewerList.get(interviewerNo++);
-            InterviewRoom interviewRoom = roomList.get(roomNo++);
-            if (interviewerNo >= interviewerList.size())
-                interviewerNo = 0;
-            if (roomNo >= roomList.size())
-                roomNo = 0;
-            interviews.put(attendee, new Interview(attendee, interviewer, interviewRoom));
+            InterviewRoom room = roomList.get(roomNo++);
+            InterviewTime time = new InterviewTime(INTERVIEW_START_TIME, INTERVIEW_END_TIME);
+            interviewerNo = resetCounterIfAllUsed(interviewerNo, interviewerList.size());
+            roomNo = resetCounterIfAllUsed(roomNo, roomList.size());
+            if (roomNo == 0)
+                updateInterviewTime();
+            interviews.add(new Interview(attendee, interviewer, room, time));
         }
         return interviews;
+    }
+
+    private int resetCounterIfAllUsed(int counter, int listSize) {
+        if (counter >= listSize) {
+            return 0;
+        }
+        return counter;
+    }
+
+    private void updateInterviewTime() {
+        int timeMultiplierFactor = 1;
+        LocalTime newTime = INTERVIEW_END_TIME.plusHours(INTERVIEW_DURATION);
+        if (newTime.isAfter(LocalTime.of(14, 01)) && newTime.isBefore(LocalTime.of(15,1))) {
+            timeMultiplierFactor++;
+        }
+        INTERVIEW_START_TIME = INTERVIEW_START_TIME.plusHours(INTERVIEW_DURATION * timeMultiplierFactor);
+        INTERVIEW_END_TIME = INTERVIEW_END_TIME.plusHours(INTERVIEW_DURATION * timeMultiplierFactor);
     }
 }

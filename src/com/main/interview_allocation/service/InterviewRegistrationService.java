@@ -1,21 +1,19 @@
 package com.main.interview_allocation.service;
 
 import com.main.interview_allocation.model.Attendee;
-import com.main.interview_allocation.model.Interview;
 import com.main.interview_allocation.model.InterviewRoom;
 import com.main.interview_allocation.model.Interviewer;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
+
 import static com.main.interview_allocation.service.InputHelper.EXIT_TEXT;
 
 public class InterviewRegistrationService {
     private static final String ATTENDEE_ID_FORMAT = "^[1-9][0-1]*$";
     private static final String INTERVIEWER_ID_FORMAT = "^[a-zA-Z]+$";
     private static final String ROOM_ID_FORMAT = "^[R][0-9]+$";
-    private static final int TWO_HOURS = 2;
     private InputHelper inputHelper;
 
     public InterviewRegistrationService() {
@@ -45,17 +43,12 @@ public class InterviewRegistrationService {
             if (newAttendee.equals(EXIT_TEXT)) {
                 break;
             }
-            if (!idAlreadyRegistered(inputs, newAttendee))
-                inputs.add(newAttendee);
+            if (inputs.contains(newAttendee)) {
+                System.out.println("already registered...!!");
+                continue;
+            }
+            inputs.add(newAttendee);
         }
         return inputs;
-    }
-
-    private <E> boolean idAlreadyRegistered(List<E> list, Object object) {
-        if (list.contains(object)) {
-            System.out.println("already registered...!!");
-            return true;
-        }
-        return false;
     }
 }

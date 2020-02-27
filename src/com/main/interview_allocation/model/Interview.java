@@ -8,18 +8,22 @@ public class Interview {
 
     private InterviewRoom room;
 
-    public Interview(Attendee attendee, Interviewer interviewer, InterviewRoom room) {
+    private InterviewTime time;
+
+    public Interview(Attendee attendee, Interviewer interviewer, InterviewRoom room, InterviewTime time) {
         this.attendee = attendee;
         this.interviewer = interviewer;
         this.room = room;
+        this.time = time;
     }
 
     @Override
     public String toString() {
-        return "\nInterview{" +
-                "\n\tattendee=" + attendee +
-                ",\n\tinterviewer=" + interviewer +
-                ",\n\troom=" + room +
+        return "\n Interview{" +
+                "\n" + attendee +
+                "\n" + interviewer +
+                "\n" + room +
+                "\n" + time +
                 "\n}";
     }
 }
