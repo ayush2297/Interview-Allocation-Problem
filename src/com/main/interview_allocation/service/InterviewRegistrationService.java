@@ -6,6 +6,8 @@ import com.main.interview_allocation.model.Interviewer;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.main.interview_allocation.service.InputHelper.EXIT_TEXT;
+
 public class InterviewRegistrationService {
 
     private InputHelper inputHelper;
@@ -18,12 +20,12 @@ public class InterviewRegistrationService {
         System.out.println("Attendees registration");
         List<Attendee> attendeesList = new ArrayList<>();
         while (true) {
-            System.out.print("enter the id of attendee :  (press 0 to exit)");
-            int newId = inputHelper.readInt();
-            if (newId == 0) {
+            System.out.print("enter the id of attendee :  (type 'exit' to exit)");
+            String newAttendee = inputHelper.readInt();
+            if (newAttendee == EXIT_TEXT) {
                 break;
             }
-            Attendee attendee = new Attendee(newId);
+            Attendee attendee = new Attendee(newAttendee);
             if (attendeesList.contains(attendee)) {
                 System.out.println("attendee already registered...!!");
                 continue;
@@ -39,7 +41,7 @@ public class InterviewRegistrationService {
         while (true) {
             System.out.print("enter the id of interviewer :  (type 'exit' to exit)");
             String newInterviewer = inputHelper.readInterviewerName();
-            if (newInterviewer == "exit") {
+            if (newInterviewer == EXIT_TEXT) {
                 break;
             }
             Interviewer interviewer = new Interviewer(newInterviewer);

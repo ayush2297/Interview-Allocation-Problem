@@ -2,9 +2,9 @@ package com.main.interview_allocation.model;
 
 public class Attendee {
 
-    private int id;
+    private String id;
 
-    public Attendee(int id) {
+    public Attendee(String id) {
         this.id = id;
     }
 
