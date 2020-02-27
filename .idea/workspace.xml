@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9945370-7fdf-4e24-bfde-e746fcdd0647" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterViewRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterviewTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Attendee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterViewRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/InterviewRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interviewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/model/Interviewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InputHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewManagementDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewManagementDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewRegistrationService.java" afterDir="false" />
@@ -38,6 +42,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -76,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582789690987</updated>
-      <workItem from="1582789695732" duration="8403000" />
+      <workItem from="1582789695732" duration="17368000" />
     </task>
     <servers />
   </component>
@@ -84,26 +89,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1582798928863">
+    <state x="533" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1582808474154">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="533" y="148" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1582798928863" />
-    <state width="1398" height="255" key="GridCell.Tab.0.bottom" timestamp="1582799942027">
+    <state x="533" y="148" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1582808474154" />
+    <state x="321" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582805310649">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1582799942027" />
-    <state width="1398" height="255" key="GridCell.Tab.0.center" timestamp="1582799942026">
+    <state x="321" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1582805310649" />
+    <state width="1398" height="624" key="GridCell.Tab.0.bottom" timestamp="1582808887388">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1582799942026" />
-    <state width="1398" height="255" key="GridCell.Tab.0.left" timestamp="1582799942026">
+    <state width="1398" height="624" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1582808887388" />
+    <state width="1398" height="624" key="GridCell.Tab.0.center" timestamp="1582808887387">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1582799942026" />
-    <state width="1398" height="255" key="GridCell.Tab.0.right" timestamp="1582799942027">
+    <state width="1398" height="624" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1582808887387" />
+    <state width="1398" height="624" key="GridCell.Tab.0.left" timestamp="1582808887386">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1582799942027" />
+    <state width="1398" height="624" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1582808887386" />
+    <state width="1398" height="624" key="GridCell.Tab.0.right" timestamp="1582808887387">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="1398" height="624" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1582808887387" />
     <state width="1398" height="255" key="GridCell.Tab.1.bottom" timestamp="1582799942028">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -120,28 +129,25 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="255" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1582799942028" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1582807061770">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.804@0.23.1440.804" timestamp="1582807061770" />
     <state x="432" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1582790989163">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="432" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.804@0.23.1440.804" timestamp="1582790989163" />
-    <state x="482" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1582797380740">
+    <state x="458" y="200" key="extract.method.dialog" timestamp="1582806819275">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="482" y="49" key="refactoring.ChangeSignatureDialog/0.23.1440.804@0.23.1440.804" timestamp="1582797380740" />
+    <state x="458" y="200" key="extract.method.dialog/0.23.1440.804@0.23.1440.804" timestamp="1582806819275" />
+    <state x="482" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1582809048482">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="482" y="49" key="refactoring.ChangeSignatureDialog/0.23.1440.804@0.23.1440.804" timestamp="1582809048482" />
     <state x="385" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1582798069010">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="385" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1582798069010" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/main/interview_allocation/service/InterviewRegistrationService.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
