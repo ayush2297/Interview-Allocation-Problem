@@ -20,10 +20,9 @@ public class InterviewManagementDashboard {
 
     public void display() {
         List<Attendee> attendeesList = registrationService.registerAttendees();
-        Map<Attendee, Interview> interviews = registrationService.registerInterviewTimings(attendeesList);
         List<Interviewer> interviewersList = registrationService.registerInterviewers();
         List<InterviewRoom> roomsList = registrationService.registerRooms();
-        Map<Attendee, Interview> interviewMap = scheduler.scheduleInterviews(attendeesList, interviewersList, roomsList, interviews);
+        Map<Attendee, Interview> interviewMap = scheduler.scheduleInterviews(attendeesList, interviewersList, roomsList);
         System.out.println(interviewMap.toString());
     }
 }

@@ -8,15 +8,9 @@ public class Interview {
 
     private InterviewRoom room;
 
-    public Interview(Attendee attendee) {
+    public Interview(Attendee attendee, Interviewer interviewer, InterviewRoom room) {
         this.attendee = attendee;
-    }
-
-    public void setInterviewer(Interviewer interviewer) {
         this.interviewer = interviewer;
-    }
-
-    public void setRoom(InterviewRoom room) {
         this.room = room;
     }
 

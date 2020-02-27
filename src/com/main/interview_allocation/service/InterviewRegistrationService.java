@@ -40,7 +40,7 @@ public class InterviewRegistrationService {
     private List<String> getList(String inputFormat) {
         List<String> inputs = new ArrayList<>();
         while (true) {
-            System.out.print("enter the id of attendee :  (type 'done' to exit)");
+            System.out.print("enter the id :  (type 'done' to exit)");
             String newAttendee = inputHelper.inputReader(inputFormat);
             if (newAttendee.equals(EXIT_TEXT)) {
                 break;
@@ -49,15 +49,6 @@ public class InterviewRegistrationService {
                 inputs.add(newAttendee);
         }
         return inputs;
-    }
-
-    public Map<Attendee, Interview> registerInterviewTimings(List<Attendee> attendeesList) {
-        Map<Attendee, Interview> attendeeInterviewMap = new HashMap<>();
-        for (Attendee attendee : attendeesList) {
-            Interview interview = new Interview(attendee);
-            attendeeInterviewMap.put(attendee,interview);
-        }
-        return attendeeInterviewMap;
     }
 
     private <E> boolean idAlreadyRegistered(List<E> list, Object object) {
