@@ -1,16 +1,21 @@
 package com.main.interview_allocation.service;
 
 import com.main.interview_allocation.model.Attendee;
-import com.main.interview_allocation.model.InterViewRoom;
+import com.main.interview_allocation.model.Interview;
+import com.main.interview_allocation.model.InterviewRoom;
 import com.main.interview_allocation.model.Interviewer;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
+import java.util.stream.Collectors;
 import static com.main.interview_allocation.service.InputHelper.EXIT_TEXT;
 
 public class InterviewRegistrationService {
-
+    private static final String ATTENDEE_ID_FORMAT = "^[1-9][0-1]*$";
+    private static final String INTERVIEWER_ID_FORMAT = "^[a-zA-Z]+$";
+    private static final String ROOM_ID_FORMAT = "^[R][0-9]+$";
+    private static final int TWO_HOURS = 2;
     private InputHelper inputHelper;
 
     public InterviewRegistrationService() {
@@ -19,50 +24,40 @@ public class InterviewRegistrationService {
 
     public List<Attendee> registerAttendees() {
         System.out.println("Attendees registration");
-        List<Attendee> attendeesList = new ArrayList<>();
-        while (true) {
-            System.out.print("enter the id of attendee :  (type 'done' to exit)");
-            String newAttendee = inputHelper.readAttendeeId();
-            if (newAttendee == EXIT_TEXT) {
-                break;
-            }
-            Attendee attendee = new Attendee(newAttendee);
-            if (!idAlreadyRegistered(attendeesList, attendee))
-                attendeesList.add(attendee);
-        }
-        return attendeesList;
+        return getList(ATTENDEE_ID_FORMAT).stream().map(Attendee::new).collect(Collectors.toList());
     }
 
     public List<Interviewer> registerInterviewers() {
         System.out.println("Interviewer registration");
-        List<Interviewer> interviewersList = new ArrayList<>();
-        while (true) {
-            System.out.print("enter the id of interviewer :  (type 'done' to exit)");
-            String newInterviewer = inputHelper.readInterviewerName();
-            if (newInterviewer == EXIT_TEXT) {
-                break;
-            }
-            Interviewer interviewer = new Interviewer(newInterviewer);
-            if (!idAlreadyRegistered(interviewersList, interviewer))
-                interviewersList.add(interviewer);
-        }
-        return interviewersList;
+        return getList(INTERVIEWER_ID_FORMAT).stream().map(Interviewer::new).collect(Collectors.toList());
     }
 
-    public List<InterViewRoom> registerRooms() {
+    public List<InterviewRoom> registerRooms() {
         System.out.println("Room registration");
-        List<InterViewRoom> roomList = new ArrayList<>();
+        return getList(ROOM_ID_FORMAT).stream().map(InterviewRoom::new).collect(Collectors.toList());
+    }
+
+    private List<String> getList(String inputFormat) {
+        List<String> inputs = new ArrayList<>();
         while (true) {
-            System.out.print("enter the id of room :  (type 'done' to exit)");
-            String newRoom = inputHelper.readRoomId();
-            if (newRoom == EXIT_TEXT) {
+            System.out.print("enter the id of attendee :  (type 'done' to exit)");
+            String newAttendee = inputHelper.inputReader(inputFormat);
+            if (newAttendee.equals(EXIT_TEXT)) {
                 break;
             }
-            InterViewRoom interviewRoom = new InterViewRoom(newRoom);
-            if (!this.idAlreadyRegistered(roomList, interviewRoom))
-                roomList.add(interviewRoom);
+            if (!idAlreadyRegistered(inputs, newAttendee))
+                inputs.add(newAttendee);
         }
-        return roomList;
+        return inputs;
+    }
+
+    public Map<Attendee, Interview> registerInterviewTimings(List<Attendee> attendeesList) {
+        Map<Attendee, Interview> attendeeInterviewMap = new HashMap<>();
+        for (Attendee attendee : attendeesList) {
+            Interview interview = new Interview(attendee);
+            attendeeInterviewMap.put(attendee,interview);
+        }
+        return attendeeInterviewMap;
     }
 
     private <E> boolean idAlreadyRegistered(List<E> list, Object object) {
