@@ -17,7 +17,25 @@ public class InputHelper {
                 System.out.println("wrong input.. try again!");
                 continue;
             }
+            input.nextLine();
             return number;
+        }
+    }
+
+    public String readInterviewerName() {
+        while (true) {
+                String name = "";
+            try {
+                name = input.next();
+                if (!name.matches("^[a-zA-Z]$"))
+                    throw new InputMismatchException();
+            } catch (InputMismatchException e) {
+                input.nextLine();
+                System.out.println("wrong input.. try again!");
+                continue;
+            }
+            input.nextLine();
+            return name;
         }
     }
 
