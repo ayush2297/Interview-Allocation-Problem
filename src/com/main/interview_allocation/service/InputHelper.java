@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class InputHelper {
     private static final String ATTENDEE_ID_FORMAT = "^[1-9][0-1]*$";
     private static final String INTERVIEWER_ID_FORMAT = "^[a-zA-Z]+$";
-    public static final String EXIT_TEXT = "exit";
+    private static final String ROOM_ID_FORMAT = "^[R][0-9]+$";
+    public static final String EXIT_TEXT = "done";
     private Scanner input = new Scanner(System.in);
 
     public String readAttendeeId() {
@@ -15,6 +16,10 @@ public class InputHelper {
 
     public String readInterviewerName() {
         return inputReader(INTERVIEWER_ID_FORMAT);
+    }
+
+    public String readRoomId() {
+        return inputReader(ROOM_ID_FORMAT);
     }
 
     public String inputReader(String regex) {
@@ -35,5 +40,4 @@ public class InputHelper {
             return name;
         }
     }
-
 }

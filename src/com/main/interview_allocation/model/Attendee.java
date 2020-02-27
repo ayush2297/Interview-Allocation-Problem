@@ -1,5 +1,7 @@
 package com.main.interview_allocation.model;
 
+import java.util.Objects;
+
 public class Attendee {
 
     private String id;
@@ -20,6 +22,11 @@ public class Attendee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Attendee attendee = (Attendee) o;
-        return id == attendee.id;
+        return Objects.equals(id, attendee.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
