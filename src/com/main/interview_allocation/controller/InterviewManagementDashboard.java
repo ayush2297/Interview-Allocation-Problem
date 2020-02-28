@@ -28,17 +28,16 @@ public class InterviewManagementDashboard {
 
     public void display() {
         List<Attendee> attendeesList = registerAttendees();
-        attendeesList = setInterviewCount(attendeesList);
+        setInterviewCount(attendeesList);
         List<Interviewer> interviewersList = registerInterviewers();
         List<InterviewRoom> roomsList = registerRooms();
         List<Interview> interviews = scheduler.scheduleInterviews(attendeesList, interviewersList, roomsList);
         System.out.println(interviews.toString());
     }
 
-    private List<Attendee> setInterviewCount(List<Attendee> attendeesList) {
+    private void setInterviewCount(List<Attendee> attendeesList) {
         System.out.println("enter no of interviews for each attendee");
         attendeesList.forEach(attendee -> attendee.setNoOfInterviews(Integer.parseInt(inputHandler.getInput(NUMBER_FORMAT))));
-        return attendeesList;
     }
 
     private List<Attendee> registerAttendees() {
