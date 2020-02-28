@@ -5,11 +5,11 @@ import java.util.List;
 
 import static com.main.interview_allocation.utilities.InputHelper.EXIT_TEXT;
 
-public class InputUtility {
+public class InputHandler {
 
     private InputHelper inputHelper;
 
-    public InputUtility() {
+    public InputHandler() {
         this.inputHelper = new InputHelper();
     }
 
