@@ -27,32 +27,32 @@ public class InterviewManagementDashboard {
     }
 
     public void display() {
-        List<Attendee> attendeesList = registerAttendees();
+        List<Attendee> attendeesList = getAttendees();
         setInterviewCount(attendeesList);
-        List<Interviewer> interviewersList = registerInterviewers();
-        List<InterviewRoom> roomsList = registerRooms();
+        List<Interviewer> interviewersList = getInterviewers();
+        List<InterviewRoom> roomsList = getRooms();
         List<Interview> interviews = scheduler.scheduleInterviews(attendeesList, interviewersList, roomsList);
         System.out.println(interviews.toString());
+    }
+
+    private List<Attendee> getAttendees() {
+        System.out.println("Attendees registration (Format : <id/non-negative-number>)");
+        return inputHandler.getList(ATTENDEE_ID_FORMAT).stream().map(Attendee::new).collect(Collectors.toList());
+    }
+
+    private List<Interviewer> getInterviewers() {
+        System.out.println("Interviewer registration (Format : <name>");
+        return inputHandler.getList(INTERVIEWER_ID_FORMAT).stream().map(Interviewer::new).collect(Collectors.toList());
+    }
+
+    private List<InterviewRoom> getRooms() {
+        System.out.println("Room registration (Format : R<room-no>)");
+        return inputHandler.getList(ROOM_ID_FORMAT).stream().map(InterviewRoom::new).collect(Collectors.toList());
     }
 
     private void setInterviewCount(List<Attendee> attendeesList) {
         System.out.println("enter no of interviews for each attendee");
         attendeesList.forEach(attendee -> attendee.setNoOfInterviews(Integer.parseInt(inputHandler.getInput(NUMBER_FORMAT))));
-    }
-
-    private List<Attendee> registerAttendees() {
-        System.out.println("Attendees registration (Format : <id/non-negative-number>)");
-        return inputHandler.getList(ATTENDEE_ID_FORMAT).stream().map(Attendee::new).collect(Collectors.toList());
-    }
-
-    private List<Interviewer> registerInterviewers() {
-        System.out.println("Interviewer registration (Format : <name>");
-        return inputHandler.getList(INTERVIEWER_ID_FORMAT).stream().map(Interviewer::new).collect(Collectors.toList());
-    }
-
-    private List<InterviewRoom> registerRooms() {
-        System.out.println("Room registration (Format : R<room-no>)");
-        return inputHandler.getList(ROOM_ID_FORMAT).stream().map(InterviewRoom::new).collect(Collectors.toList());
     }
 
 }
