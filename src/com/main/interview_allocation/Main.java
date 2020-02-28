@@ -1,6 +1,6 @@
 package com.main.interview_allocation;
 
-import com.main.interview_allocation.service.InterviewManagementDashboard;
+import com.main.interview_allocation.controller.InterviewManagementDashboard;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.main.interview_allocation.service;
+package com.main.interview_allocation.utilities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

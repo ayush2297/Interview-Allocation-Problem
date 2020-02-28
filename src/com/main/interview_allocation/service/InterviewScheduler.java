@@ -44,7 +44,7 @@ public class InterviewScheduler {
     private void updateInterviewTime() {
         int timeMultiplierFactor = 1;
         LocalTime newTime = INTERVIEW_END_TIME.plusHours(INTERVIEW_DURATION);
-        if (newTime.isAfter(LocalTime.of(14, 01)) && newTime.isBefore(LocalTime.of(15,1))) {
+        if (newTime.isAfter(LocalTime.of(14, 1)) && newTime.isBefore(LocalTime.of(15,1))) {
             timeMultiplierFactor++;
         }
         INTERVIEW_START_TIME = INTERVIEW_START_TIME.plusHours(INTERVIEW_DURATION * timeMultiplierFactor);
