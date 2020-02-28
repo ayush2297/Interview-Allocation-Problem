@@ -4,13 +4,21 @@ import java.time.LocalTime;
 
 public class InterviewTime {
 
-    private final LocalTime startTime;
+    private LocalTime startTime;
 
-    private final LocalTime endTime;
+    private LocalTime endTime;
 
     public InterviewTime(LocalTime startTime, LocalTime endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
     }
 
     @Override

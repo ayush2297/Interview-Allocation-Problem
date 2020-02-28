@@ -5,8 +5,10 @@ import com.main.interview_allocation.model.Interview;
 import com.main.interview_allocation.model.InterviewRoom;
 import com.main.interview_allocation.model.Interviewer;
 import com.main.interview_allocation.service.InterviewScheduler;
+import com.main.interview_allocation.service.TimeSlotManager;
 import com.main.interview_allocation.utilities.InputHandler;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,7 +22,7 @@ public class InterviewManagementDashboard {
 
     public InterviewManagementDashboard() {
         inputHandler = new InputHandler();
-        scheduler = new InterviewScheduler();
+        scheduler = new InterviewScheduler(new TimeSlotManager(LocalTime.of(9, 0),LocalTime.of(17, 0),2));
     }
 
     public void display() {
