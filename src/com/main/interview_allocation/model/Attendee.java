@@ -1,25 +1,25 @@
 package com.main.interview_allocation.model;
 
-import java.util.Objects;
-
 public class Attendee {
 
     private String id;
+
+    private int noOfInterviews;
 
     public Attendee(String id) {
         this.id = id;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Attendee attendee = (Attendee) o;
-        return Objects.equals(id, attendee.id);
+    public int getNoOfInterviews() {
+        return noOfInterviews;
+    }
+
+    public void setNoOfInterviews(int noOfInterviews) {
+        this.noOfInterviews = noOfInterviews;
     }
 
     @Override
     public String toString() {
-        return "\tAttendee ="+ id ;
+        return "\tAttendee = " + id + " pending interviews : " + noOfInterviews;
     }
 }

@@ -16,7 +16,7 @@ public class InputHandler {
     public List<String> getList(String inputFormat) {
         List<String> inputs = new ArrayList<>();
         while (true) {
-            System.out.print("enter the id :  (type 'done' to exit)");
+            System.out.print("enter data :  (type 'done' to exit)");
             String newAttendee = inputHelper.inputReader(inputFormat);
             if (newAttendee.equals(EXIT_TEXT)) {
                 break;
@@ -28,5 +28,9 @@ public class InputHandler {
             inputs.add(newAttendee);
         }
         return inputs;
+    }
+
+    public String getInput(String regex) {
+        return inputHelper.inputReader(regex);
     }
 }

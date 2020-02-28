@@ -37,8 +37,4 @@ public class TimeSlotManager {
         }
         return new InterviewTime(newStartTime,newEndTime);
     }
-
-    private boolean isOverlappingBreakTime(LocalTime time) {
-        return time.isAfter(LocalTime.of(13, 59)) && time.isBefore(LocalTime.of(15, 1));
-    }
 }
