@@ -17,6 +17,7 @@ public class InterviewScheduler {
         int interviewerNo = 0;
         int roomNo = 0;
         List<Interview> interviews = new ArrayList<>();
+        boolean isRoomCountMoreThanInterviewers = roomList.size() > interviewerList.size();
         for (Attendee attendee : attendeeList) {
             if (INTERVIEW_START_TIME.equals(DAY_END_TIME)) {
                 System.out.println("pending interviews of id : " + attendee.toString());
@@ -27,8 +28,13 @@ public class InterviewScheduler {
             InterviewTime time = new InterviewTime(INTERVIEW_START_TIME, INTERVIEW_END_TIME);
             interviewerNo = resetCounterIfAllUsed(interviewerNo, interviewerList.size());
             roomNo = resetCounterIfAllUsed(roomNo, roomList.size());
-            if (roomNo == 0)
-                updateInterviewTime();
+            if (!isRoomCountMoreThanInterviewers) {
+                if (roomNo == 0)
+                    updateInterviewTime();
+            } else {
+                if (interviewerNo == 0)
+                    updateInterviewTime();
+            }
             interviews.add(new Interview(attendee, interviewer, room, time));
         }
         return interviews;
