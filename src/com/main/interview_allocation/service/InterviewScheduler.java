@@ -20,7 +20,7 @@ public class InterviewScheduler {
         InterviewTime interviewSlot = timeSlotManager.getSlot();
         boolean isRoomCountMoreThanInterviewers = roomList.size() > interviewerList.size();
         for (Attendee attendee : attendeeList) {
-            if (interviewSlot.getStartTime().equals(timeSlotManager.getDayEndsAt())) {
+            if (interviewSlot.getStartTime().isAfter(timeSlotManager.getDayEndsAt().minusMinutes(1))) {
                 System.out.println("pending interviews of id : " + attendee.toString());
                 continue;
             }

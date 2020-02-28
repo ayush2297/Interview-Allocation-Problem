@@ -7,11 +7,15 @@ import java.time.LocalTime;
 public class TimeSlotManager {
     private LocalTime slotStartsAt;
     private final LocalTime dayEndsAt;
+    private final LocalTime breakStartTime;
+    private final LocalTime breakEndTime;
     private int interviewDuration;
 
-    public TimeSlotManager(LocalTime slotStartsAt, LocalTime dayEndsAt, int interviewDuration) {
+    public TimeSlotManager(LocalTime slotStartsAt, LocalTime dayEndsAt, LocalTime breakStartTime, LocalTime breakEndTime, int interviewDuration) {
         this.slotStartsAt = slotStartsAt;
         this.dayEndsAt = dayEndsAt;
+        this.breakStartTime = breakStartTime;
+        this.breakEndTime = breakEndTime;
         this.interviewDuration = interviewDuration;
     }
 
@@ -30,11 +34,13 @@ public class TimeSlotManager {
     public InterviewTime updateInterviewTime(InterviewTime interviewSlot) {
         LocalTime newStartTime = interviewSlot.getEndTime();
         LocalTime newEndTime = getEndTime(newStartTime);
-        if (newStartTime.isAfter(LocalTime.of(13, 59)) && newStartTime.isBefore(LocalTime.of(15, 0))
-                || newEndTime.isAfter(LocalTime.of(14, 0)) && newEndTime.isBefore(LocalTime.of(15, 1))) {
-            newStartTime = newStartTime.plusHours(interviewDuration);
-            newEndTime = newEndTime.plusHours(interviewDuration);
+        if (newStartTime.isAfter(breakStartTime.minusMinutes(1)) && newStartTime.isBefore(breakEndTime)
+                || newEndTime.isAfter(breakStartTime) && newEndTime.isBefore(breakEndTime.plusMinutes(1))) {
+            newStartTime = breakEndTime;
+            newEndTime = getEndTime(newStartTime);
         }
-        return new InterviewTime(newStartTime,newEndTime);
+        if (newStartTime.isAfter(dayEndsAt.minusMinutes(1)) || newEndTime.isAfter(dayEndsAt.minusMinutes(1)) )
+            return new InterviewTime(dayEndsAt,dayEndsAt);
+        return new InterviewTime(newStartTime, newEndTime);
     }
 }

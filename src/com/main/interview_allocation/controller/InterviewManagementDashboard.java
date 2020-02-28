@@ -22,8 +22,13 @@ public class InterviewManagementDashboard {
     private static final String ROOM_ID_FORMAT = "^[R][0-9]+$";
 
     public InterviewManagementDashboard() {
+        LocalTime startTime = LocalTime.of(9, 0);
+        LocalTime endTime = LocalTime.of(17, 0);
+        LocalTime breakStartTime = LocalTime.of(14, 0);
+        LocalTime breakEndTime = LocalTime.of(15, 0);
+        int interviewDuration = 1;
         inputHandler = new InputHandler();
-        scheduler = new InterviewScheduler(new TimeSlotManager(LocalTime.of(9, 0),LocalTime.of(17, 0),2));
+        scheduler = new InterviewScheduler(new TimeSlotManager(startTime,endTime,breakStartTime,breakEndTime,interviewDuration));
     }
 
     public void display() {
